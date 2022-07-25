@@ -1,0 +1,1 @@
+select customer.customer_id, customer.first_name as First_name,customer.last_name as Surname,sum(payment.amount) as TotalPayment from payment INNER JOIN customer ON payment.customer_id=customer.customer_id group by payment.customer_id ;
